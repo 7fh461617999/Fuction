@@ -29,4 +29,12 @@ Return: It will still send the value back to the main program when it hits the r
 3. Yes, and actually, that is the only way to call it!   
 Explanation: A function with void (no return value) does not produce any data to "hold." Therefore, you cannot save it into a variable. You simply call it as a command.  
 
-### Experiment 4 ()
+### Experiment 4 (ExpressingGratitude_11.java)
+1. main is the entry point of any program. However, if we look at the flow of calls inside your program, the order of events is:
+ 1. main() starts: It is the first code to run.
+ 2. sayThankyou() is called: The main function commands this function to start.
+ 3. getGreetingRecipient() is called: Immediately inside sayThankyou(), this function is called to get the name.
+2. Explanation: In the Java programming language, the compiler reads the entire class file at once. It does not matter if you write your helper functions (like sayThankyou) on line 5 and your main function on line 50, or vice versa.
+3. done
+
+### Experiment 5 
