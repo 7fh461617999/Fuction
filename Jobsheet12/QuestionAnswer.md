@@ -18,4 +18,15 @@ c. The Difference: A normal variable (like int x = 5;) usually gets its value fr
 a. Parameters are for INPUT: In Java, parameters are primarily used to pass data into the function.  
 b. Return Values are for OUTPUT: If you want to get data out of a function (like the result of a calculation), you typically do not use the parameter. Instead, you use the return keyword.  
 ### Experiment 3 (Gratitude_11.java)  
-1. 
+1. We need a return value when the main program needs the result of the function to do further work.
+The Concept: If a function performs a task (like a calculation or getting user input) and produces a specific piece of data that you want to use outside of that function (for example, to store in a variable or use in a math equation), you must use a return value.
+Example : the function getGreetingRecipient() asks the user for a name. It returns that name so that the main function can store it in the variable name and use it to build a specific sentence later.
+Rule of Thumb: If you need to "remember" the answer, use a return value. If you just need to "show" the answer immediately and forget it, you might not need one.
+2. Yes, absolutely. You can include a print statement inside a function that also returns a value.
+The Impact: The function will do two things:
+Side Effect: It will print the text to the console screen immediately when the line is executed.  
+Return: It will still send the value back to the main program when it hits the return keyword.    
+3. Yes, and actually, that is the only way to call it!   
+Explanation: A function with void (no return value) does not produce any data to "hold." Therefore, you cannot save it into a variable. You simply call it as a command.  
+
+### Experiment 4 ()
