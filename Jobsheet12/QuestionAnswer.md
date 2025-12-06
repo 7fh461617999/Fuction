@@ -37,4 +37,61 @@ Explanation: A function with void (no return value) does not produce any data to
 2. Explanation: In the Java programming language, the compiler reads the entire class file at once. It does not matter if you write your helper functions (like sayThankyou) on line 5 and your main function on line 50, or vice versa.
 3. done
 
-### Experiment 5 
+### Experiment 5 (Experimrnt5_11.java)
+1.Here are the answers regarding Experiment 5: Variable Arguments (Varargs) from your jobsheet.
+
+1. Writing int... a indicates that the parameter a is a Variable Argument (Varargs). The three dots (...) tell the Java compiler: "I don't know exactly how many integers are coming. It could be one, ten, or even zero. Just take all of them and bundle them up.".Inside the function, Java automatically treats a as an array (int[] a). That is why the code in your jobsheet can uses a loop for (int i : a) to read the data. It provides flexibility. Without ..., you would need to define exactly how many inputs you expect (e.g., show(int a, int b, int c)), or force the user to create an array manually before calling the function.  
+2.Since the jobsheet asks you to come up with these, here are three practical scenarios where professional developers use Varargs:
+
+A. An "Addition" Calculator You want a function that can sum up numbers, but you don't know if the user wants to add 2 numbers or 50 numbers.
+
+public int sumAll(int... numbers) {
+    int total = 0;
+    for(int num : numbers) {
+        total += num;
+    }
+    return total;
+}
+// Usage: sumAll(1, 2); OR sumAll(10, 20, 30, 40, 50);
+
+B. Text Joiner (Social Media) Imagine you want to combine hashtags for a post. The user might have 1 hashtag or 10.
+
+public String combineHashtags(String... tags) {
+    String result = "";
+    for(String tag : tags) {
+        result += "#" + tag + " ";
+    }
+    return result;
+}
+// Usage: combineHashtags("Java", "Coding", "Student");
+C. Ordering a Pizza (Toppings) A customer might want just "Cheese," or they might want
+ "Cheese, Pepperoni, Mushrooms, and Onions."
+
+public void orderPizza(String size, String... toppings) {
+    System.out.println("Ordering a " + size + " pizza with " + toppings.length + " toppings.");
+}
+// Usage: orderPizza("Large", "Cheese", "Pepperoni");
+3. Strictly speaking: NO. You cannot have more than one varargs parameter in a single function definition.
+Invalid Example: void tryThis(int... numbers, String... words) { ... } // ERROR!
+Reason: The computer doesn't know where the list of numbers stops and the list of words begins.
+However, you CAN mix normal parameters with ONE varargs. This is exactly what happens in your jobsheet Experiment 5.
+Valid Example: void show(String str, int... a)
+The Golden Rule: The varargs parameter (...) must always be the very last parameter in the list.
+
+### Experiment 6 (Experimen6_11.java)  
+1. the first step start in main and input the value of p, l, t . after input main call the area function for calculate the area,and calculate the Volume ,in caculate Volume funtion it call Calcuation of area for got the value of p*l .  
+2. the program start by the main funtion call the jumlah funtion to get value of temp variable with input (1,1);and sum the input .afther that call tampil jumlah with inpt (temp,5) and call funtion jumlah again , after got the value of tampiljumlah,we call TampilHinggaKei Function with value of tampiljumlah.
+3. A. Function with vs. Without Parameters
+Without Parameters: Use this when the task is static (always the same).
+Example: showMenu() – The menu options don't change, so you don't need to feed it data.
+
+With Parameters: Use this when the task depends on dynamic input.
+Example: calculateAge(int birthYear) – The calculation changes depending on the person, so you need to pass the birth year as a parameter.
+
+B. Function with vs. Without Return Value
+Without Return Value (void): Use this when the function is an action that doesn't produce a distinct "answer" for the computer to remember.
+Example: saveFile() or printWelcomeMessage(). It just does the job and finishes.
+
+With Return Value: Use this when the function is a question that the main program needs the answer to.
+Example: getTemperature(). The main program needs the number back so it can decide whether to turn on the AC or the heater.
+
