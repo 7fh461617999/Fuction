@@ -1,8 +1,8 @@
 package Jobsheet12;
 import java.util.Scanner;
 public class CubeStudent11 {
-    static String[] Students = {"Sari","Rina","Yani","Dwi","Lusi"};
-    static int[][] grades = new int[5][7];
+    static String[] Students ;
+    static int[][] grades ;
     public static void InputGrades(){
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < grades.length; i++) {
@@ -57,9 +57,22 @@ public class CubeStudent11 {
         }
     }
  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter the number of Student : ");
+    int nStudent = sc.nextInt();
+    System.out.println("Enter the number of Week : ");
+    int nWeek = sc.nextInt();
+    String Students[] = new String[nStudent];
+    int grades[][] =new int[nStudent][nWeek];
+    sc.nextLine();
+    for (int i = 0; i < grades.length; i++) {
+        System.out.print("input name of Student "+ i+1 +" : ");
+        Students[i]=sc.nextLine();
+    }  
     InputGrades();
     showGrades();
     findHighestWeek();
     findHighestStudent();
+    sc.close();
  }   
 }
